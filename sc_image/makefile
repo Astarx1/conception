@@ -3,8 +3,8 @@
 # export LD_LIBRARY_PATH=/usr/lsa/apps/systemc-2.3.1/lib-linux64/
 # export SYSTEMC_HOME="/usr/lsa/apps/systemc-2.3.1"
 #################################################################
-MODULE = inv
-SRCS = gdr.cpp sc_image.cpp sc_inv.cpp sc_main.cpp
+MODULE = gv2D
+SRCS = gdr.cpp sc_image.cpp gv2D.cpp tb_gv2D.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 ##########################################################################"

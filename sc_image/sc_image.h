@@ -50,6 +50,7 @@ SC_MODULE (image)
 	void synch_out();
 	void horloge_out();
 	void get_result();
+	unsigned getNx ();
 
 	SC_CTOR(image)
 	{

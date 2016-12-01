@@ -158,3 +158,7 @@ void image::get_result()
 		printf("Sauvegarde du resultat dans %s\n", FichierOut); 
 	}	
 }
+
+unsigned image::getNx() { 
+	return Nx; 
+}
