@@ -9,7 +9,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 ##########################################################################"
 TARGET_ARCH = linux64
-SYSTEMC=/usr/lsa/apps/systemc-2.3.1
+SYSTEMC=/home/romain/systemc-2.3.1
 
 CC = g++
 OPT    = -O3 -Wno-deprecated
