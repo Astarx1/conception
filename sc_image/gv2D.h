@@ -20,9 +20,8 @@ SC_MODULE (gv2D)
 	sc_out <bool> bk_out;
 	sc_out <bool> hpix_out;
 	
-	std::vector<sc_uint<8> > b1;
-	std::vector<sc_uint<8> > b2;
-	std::vector<sc_uint<8> > b3;
+	std::vector<sc_uint<8> > up;
+	sc_uint<8> bd,tmp;
 
 	unsigned nx;
 	unsigned cur_x;

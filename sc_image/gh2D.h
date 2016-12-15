@@ -20,18 +20,20 @@ SC_MODULE (gh2D)
 	sc_out <bool> bk_out;
 	sc_out <bool> hpix_out;
 	
-	sc_uint<8> b1;
-	sc_uint<8> b2;
-	sc_uint<8> b3;
+	std::vector<sc_uint<8> > up;
+	sc_uint<8> bd,tmp;
+
+	unsigned nx;
+	unsigned cur_x;
 
 	void gh2DDerive(void);
-
+	void setNx(unsigned nnx);
 	SC_CTOR(gh2D)
 	{
 		SC_METHOD(gh2DDerive);
-		b1 = 0;
-		b2 = 0;
-		b3 = 0;
+		bd = 0;
+		tmp = 0;
+		cur_x = 0;
 		sensitive << clk << blank << pixel_in << reset;
 	}
 };

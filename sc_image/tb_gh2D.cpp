@@ -59,6 +59,7 @@ int sc_main(int argc, char *argv[])
 
 	// Exemple de traitement
 	gh2D inv1("gh2D");
+	inv1.setNx(image1.getNx());
 	std::cout << "[Main] fin de l'allocation de ressources. Mise en place des connexions ..." << std::endl;
 	inv1.reset(reset);
 	inv1.blank(blank);

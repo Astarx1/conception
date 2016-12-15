@@ -12,7 +12,7 @@ void gv1D::gv1DDerive()
 		if(blank.read() == 1)
 		{
 			std::cout << cur_x << " ";
-			pixel_out.write(abs(pixel_in.read()-before.at(cur_x)));
+			pixel_out.write(abs((int)pixel_in.read()-(int)before.at(cur_x)));
 			before.at(cur_x) = pixel_in.read();
 			if (cur_x == nx) {
 				std::cout << std::endl;
@@ -36,8 +36,8 @@ void gv1D::setNx(unsigned nnx) {
 	nx = nnx;
 	std::cout << "Reallocation " << nnx << " elements" << std::endl;
 	before.resize(nnx+1);	// Unique malloc
-	for (int i = 0; i <= nnx + 1; ++i) {
-		before.at(0);
+	for (int i = 0; i <= nnx; ++i) {
+		before.at(i) = 0;
 	}
 	std::cout << "Fin reallocation" << std::endl;
 }

@@ -11,7 +11,7 @@ void gh1D::gh1DDerive()
 	{	
 		if(blank.read() == 1)
 		{
-			pixel_out.write(abs(before-pixel_in.read()));
+			pixel_out.write(abs(((int)before-(int)pixel_in.read())));
 			before = pixel_in.read();
 		}
 	}
