@@ -12,16 +12,14 @@ void gh2D::gh2DDerive()
 		if(blank.read() == 1)
 		{	
 			std::cout << cur_x << " ";
-			tmp = up.at(cur_x) + pixel_in.read();
+			tmp = (int) up.at(cur_x) + (int) pixel_in.read();
 
 			pixel_out.write(abs((int)bd-(int)tmp));
 			
 			bd = tmp;
 			up.at(cur_x) = pixel_in.read();
 
-			if (cur_x == nx) {
-				std::cout << std::endl;
-				std::cout << "L : ";
+			if (cur_x == nx) { 
 				cur_x = 1;
 			}
 			else {

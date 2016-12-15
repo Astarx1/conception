@@ -12,17 +12,15 @@ void gv2D::gv2DDerive()
 		if(blank.read() == 1)
 		{	
 			//std::cout << cur_x << " ";
-			tmp = up.at(cur_x) - pixel_in.read();
-
-			pixel_out.write(abs((int)bd+(int)tmp));
-			std::cout << pixel_in.read() << " ";
+			tmp = abs((int) up.at(cur_x) - (int) pixel_in.read());
+			int a = abs((int)bd+(int)tmp);
+			if (a > 255) a = 255;
+			pixel_out.write((unsigned char) a); 
 			
 			bd = tmp;
 			up.at(cur_x) = pixel_in.read();
 
 			if (cur_x == nx) {
-				std::cout << std::endl;
-				std::cout << "L : ";
 				cur_x = 1;
 			}
 			else {
